@@ -1,0 +1,48 @@
+lexiresume/
+├── public/
+│   └── index.html                     # Uygulamanın HTML giriş noktası
+│
+├── src/
+│   ├── assets/                        # Statik medya dosyaları (logo, resim, font vb.)
+│   │   └── logo.svg
+│   │
+│   ├── components/                    # Tekil, yeniden kullanılabilir UI bileşenleri
+│   │   ├── SectionEditor.jsx          # CV bölümü için Lexical tabanlı zengin metin editörü
+│   │   ├── Toolbar.jsx                # Editör araç çubuğu (kalın, italik, liste vb.)
+│   │   ├── CVPreview.jsx              # Kullanıcı girdilerinin canlı önizlemesi
+│   │   ├── ExportPDFButton.jsx        # PDF dışa aktarım butonu
+│   │   └── ThemeToggle.jsx            # Açık/Karanlık tema geçiş bileşeni
+│   │
+│   ├── features/                      # Uygulama düzeyinde işlevsel bölümler
+│   │   ├── builder/                   # CV oluşturucu sayfası ve mantığı
+│   │   │   ├── BuilderPage.jsx        # CV oluşturma sayfası ana bileşeni
+│   │   │   └── SectionList.jsx        # CV bölümlerinin listesi ve yönetimi
+│   │   │
+│   │   └── auth/                     # Kullanıcı kimlik doğrulama (opsiyonel)
+│   │       └── LoginPage.jsx
+│   │
+│   ├── data/                         # Statik veri ve konfigürasyonlar
+│   │   └── defaultSections.js        # Varsayılan CV bölümleri listesi
+│   │
+│   ├── hooks/                        # Özel React hook’ları
+│   │   └── useLocalStorage.js         # LocalStorage işlemleri için özel hook
+│   │
+│   ├── lib/                         # Üçüncü parti entegrasyonları ve konfigürasyonlar
+│   │   └── lexicalConfig.js           # Lexical editör ayarları, tema ve pluginler
+│   │
+│   ├── styles/                      # Özel CSS ve stil dosyaları
+│   │   ├── editor.css                 # Lexical editör özel stilleri
+│   │   └── globals.css                # Global ve Tailwind stil tanımları
+│   │
+│   ├── utils/                       # Yardımcı fonksiyonlar ve iş mantığı
+│   │   ├── exportToPDF.js             # PDF oluşturma fonksiyonları
+│   │   └── sanitizeHtml.js            # HTML temizleme/güvenlik fonksiyonları
+│   │
+│   ├── App.jsx                      # Uygulamanın ana bileşeni (Router, layout)
+│   ├── main.jsx                     # React DOM render noktası
+│   └── index.css                    # Tailwind ve global stil importu
+│
+├── tailwind.config.js               # Tailwind yapılandırması
+├── vite.config.js                  # Vite yapılandırması
+├── package.json                    # Proje bağımlılıkları ve scriptler
+└── README.md                       # Proje açıklaması ve dökümantasyon
