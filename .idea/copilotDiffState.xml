@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/src/components/Footer.js">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/components/Footer.js" />
+              <option name="originalContent" value="import React from 'react';&#10;&#10;function Footer() {&#10;&#10;    return (&#10;&#10;        &lt;footer &gt;&#10;Footer Component&#10;        &lt;/footer&gt;&#10;&#10;&#10;    )&#10;}&#10;export default Footer;" />
+              <option name="updatedContent" value="import React from 'react';&#10;&#10;function Footer() {&#10;  return (&#10;    &lt;footer style={{ background: '#f8f9fa', padding: '1rem', borderTop: '1px solid #e0e0e0', textAlign: 'center', marginTop: 'auto' }}&gt;&#10;      &lt;small&gt;&amp;copy; {new Date().getFullYear()} Your Name. All rights reserved.&lt;/small&gt;&#10;    &lt;/footer&gt;&#10;  );&#10;}&#10;&#10;export default Footer;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/components/Navbar.jsx">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/components/Navbar.jsx" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/components/Navi.js">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/components/Navi.js" />
+              <option name="originalContent" value="import React from 'react';&#10;import { Link } from 'react-router-dom';&#10;&#10;function Navi() {&#10;  return (&#10;    &lt;nav style={{ background: '#f8f9fa', padding: '1rem', borderBottom: '1px solid #e0e0e0' }}&gt;&#10;      &lt;ul style={{ display: 'flex', listStyle: 'none', margin: 0, padding: 0, gap: '1.5rem' }}&gt;&#10;        &lt;li&gt;&lt;Link to=&quot;/&quot;&gt;Home&lt;/Link&gt;&lt;/li&gt;&#10;        &lt;li&gt;&lt;Link to=&quot;/about&quot;&gt;About&lt;/Link&gt;&lt;/li&gt;&#10;        &lt;li&gt;&lt;Link to=&quot;/projects&quot;&gt;Projects&lt;/Link&gt;&lt;/li&gt;&#10;        &lt;li&gt;&lt;Link to=&quot;/contact&quot;&gt;Contact&lt;/Link&gt;&lt;/li&gt;&#10;      &lt;/ul&gt;&#10;    &lt;/nav&gt;&#10;  );&#10;}&#10;&#10;export default Navi;&#10;" />
+              <option name="updatedContent" value="import React from 'react';&#10;import { Link } from 'react-router-dom';&#10;&#10;function Navi() {&#10;  return (&#10;    &lt;nav className=&quot;navbar navbar-expand-lg navbar-light bg-light border-bottom mb-4&quot;&gt;&#10;      &lt;div className=&quot;container-fluid&quot;&gt;&#10;        &lt;Link className=&quot;navbar-brand&quot; to=&quot;/&quot;&gt;LexiResume&lt;/Link&gt;&#10;        &lt;button className=&quot;navbar-toggler&quot; type=&quot;button&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#navbarNav&quot; aria-controls=&quot;navbarNav&quot; aria-expanded=&quot;false&quot; aria-label=&quot;Toggle navigation&quot;&gt;&#10;          &lt;span className=&quot;navbar-toggler-icon&quot;&gt;&lt;/span&gt;&#10;        &lt;/button&gt;&#10;        &lt;div className=&quot;collapse navbar-collapse&quot; id=&quot;navbarNav&quot;&gt;&#10;          &lt;ul className=&quot;navbar-nav ms-auto&quot;&gt;&#10;            &lt;li className=&quot;nav-item&quot;&gt;&#10;              &lt;Link className=&quot;nav-link&quot; to=&quot;/&quot;&gt;CV Oluştur&lt;/Link&gt;&#10;            &lt;/li&gt;&#10;            &lt;li className=&quot;nav-item&quot;&gt;&#10;              &lt;Link className=&quot;nav-link&quot; to=&quot;/preview&quot;&gt;Önizleme&lt;/Link&gt;&#10;            &lt;/li&gt;&#10;            &lt;li className=&quot;nav-item&quot;&gt;&#10;              &lt;Link className=&quot;nav-link&quot; to=&quot;/login&quot;&gt;Giriş&lt;/Link&gt;&#10;            &lt;/li&gt;&#10;          &lt;/ul&gt;&#10;        &lt;/div&gt;&#10;      &lt;/div&gt;&#10;    &lt;/nav&gt;&#10;  );&#10;}&#10;&#10;export default Navi;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/index.js">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/index.js" />
+              <option name="originalContent" value="import React from 'react';&#10;import ReactDOM from 'react-dom/client';&#10;import './index.css';&#10;import App from './App';&#10;import reportWebVitals from './reportWebVitals';&#10;import 'bootstrap/dist/css/bootstrap.min.css';&#10;const root = ReactDOM.createRoot(document.getElementById('root'));&#10;root.render(&#10;  &lt;React.StrictMode&gt;&#10;    &lt;App /&gt;&#10;  &lt;/React.StrictMode&gt;&#10;);&#10;&#10;// If you want to start measuring performance in your app, pass a function&#10;// to log results (for example: reportWebVitals(console.log))&#10;// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals&#10;reportWebVitals();&#10;" />
+              <option name="updatedContent" value="import React from 'react';&#10;import ReactDOM from 'react-dom/client';&#10;import './index.css';&#10;import App from './App';&#10;import reportWebVitals from './reportWebVitals';&#10;import 'bootstrap/dist/css/bootstrap.min.css';&#10;import { BrowserRouter } from 'react-router-dom';&#10;const root = ReactDOM.createRoot(document.getElementById('root'));&#10;root.render(&#10;  &lt;React.StrictMode&gt;&#10;    &lt;BrowserRouter&gt;&#10;      &lt;App /&gt;&#10;    &lt;/BrowserRouter&gt;&#10;  &lt;/React.StrictMode&gt;&#10;);&#10;&#10;// If you want to start measuring performance in your app, pass a function&#10;// to log results (for example: reportWebVitals(console.log))&#10;// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals&#10;reportWebVitals();" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
