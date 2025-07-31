@@ -3,46 +3,57 @@ lexiresume/
 │   └── index.html                         # Uygulamanın HTML giriş noktası
 │
 ├── src/
+│
+│   ├── app/                               # Redux store konumu
+│   │   └── store.js                       # Redux store yapılandırması
+│
 │   ├── assets/                            # Logo, resim, font gibi statik dosyalar
 │   │   └── logo.svg
-│   │
+│
 │   ├── components/                        # Yeniden kullanılabilir UI bileşenleri
-│   │   ├── SectionEditor.jsx              # Lexical editör, Bootstrap ile stillenmiş
-│   │   ├── Toolbar.jsx                    # Editör toolbar (Bootstrap butonları)
-│   │   ├── CVPreview.jsx                  # CV’nin canlı önizlemesi (Bootstrap kartlar)
-│   │   ├── ExportPDFButton.jsx            # PDF dışa aktarma butonu (Bootstrap butonu)
-│   │   └── ThemeToggle.jsx                # Tema değiştirme (opsiyonel, Bootstrap uyumlu)
-│   │
-│   ├── features/                          # Sayfa bazlı işlevsel bölümler
+│   │   ├── SectionEditor.jsx              # Lexical editör, Redux ile entegre
+│   │   ├── Toolbar.jsx                    # Editör toolbar (Bootstrap ile)
+│   │   ├── CVPreview.jsx                  # CV önizlemesi (Redux state okur)
+│   │   ├── ExportPDFButton.jsx           # PDF dışa aktarma butonu
+│   │   └── ThemeToggle.jsx               # Tema değiştirici (Redux destekli)
+│
+│   ├── features/                          # Sayfa bazlı modüller ve Redux slice'ları
 │   │   ├── builder/
 │   │   │   ├── BuilderPage.jsx            # CV oluşturma sayfası
-│   │   │   └── SectionList.jsx            # Bölüm listesi ve yönetimi
+│   │   │   └── SectionList.jsx            # CV bölümleri listesi (Redux ile)
 │   │   │
-│   │   └── auth/                         # Kullanıcı kimlik doğrulama (opsiyonel)
-│   │       └── LoginPage.jsx
-│   │
-│   ├── data/                             # Statik veri ve yapılandırmalar
-│   │   └── defaultSections.js             # Varsayılan CV bölümleri listesi
-│   │
-│   ├── hooks/                            # Özel React hook’ları
-│   │   └── useLocalStorage.js             # LocalStorage işlemleri için hook
-│   │
-│   ├── lib/                             # Üçüncü parti entegrasyonları ve konfigürasyonlar
-│   │   └── lexicalConfig.js               # Lexical editör ayarları, tema, pluginler
-│   │
-│   ├── styles/                          # Bootstrap dışı özel CSS
-│   │   ├── editor.css                     # Lexical editör özel stilleri
-│   │   └── globals.css                    # Global CSS (varsayılan Bootstrap dışında)
-│   │
-│   ├── utils/                           # Yardımcı fonksiyonlar
-│   │   ├── exportToPDF.js                 # PDF oluşturma fonksiyonları
-│   │   └── sanitizeHtml.js                # HTML temizleme/güvenlik fonksiyonları
-│   │
-│   ├── App.jsx                          # Uygulamanın ana bileşeni (Router ve layout)
-│   ├── main.jsx                         # ReactDOM render noktası
-│   └── index.css                        # Bootstrap ve global CSS importu
+│   │   ├── auth/                          # Kullanıcı giriş çıkışı (opsiyonel)
+│   │   │   └── LoginPage.jsx
+│   │   │
+│   │   ├── cv/                            # CV slice (Redux logic burada)
+│   │   │   ├── cvSlice.js                 # createSlice ile CV state yönetimi
+│   │   │   └── cvSelectors.js             # (Opsiyonel) selector fonksiyonları
+│   │   │
+│   │   └── theme/                         # Tema slice (opsiyonel)
+│   │       └── themeSlice.js              # Dark/light tema yönetimi
 │
-├── tailwind.config.js (kaldırılabilir veya boş bırakılabilir)
-├── vite.config.js                      # Vite yapılandırması
-├── package.json
-└── README.md
+│   ├── data/                              # Statik veri ve varsayılan içerik
+│   │   └── defaultSections.js             # Varsayılan CV bölümleri
+│
+│   ├── hooks/                             # Özel React hook’ları
+│   │   └── useLocalStorage.js             # (Kullanılmaya devam edebilir)
+│
+│   ├── lib/                               # 3. parti ayarlar ve config’ler
+│   │   └── lexicalConfig.js               # Lexical editör ayarları
+│
+│   ├── styles/                            # Bootstrap dışı özel CSS dosyaları
+│   │   ├── editor.css
+│   │   └── globals.css
+│
+│   ├── utils/                             # Yardımcı fonksiyonlar
+│   │   ├── exportToPDF.js
+│   │   └── sanitizeHtml.js
+│
+│   ├── App.jsx                            # Ana uygulama bileşeni (Router içerir)
+│   ├── main.jsx                           # React DOM render ve Redux Provider burada
+│   └── index.css                          # Bootstrap ve global CSS import
+│
+├── tailwind.config.js                     # (Varsa, Tailwind yapılandırması)
+├── vite.config.js                         # Vite yapılandırması
+├── package.json                           # Bağımlılıklar ve script’ler
+└── README.md                              # Proje açıklamaları ve kurulum notları
